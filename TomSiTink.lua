@@ -1,30 +1,3 @@
-function setTeam(teamName)
-    local args = {
-        [1] = "Piarates Team",
-        [2] = "Marines Team"
-    }
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-end
-
-spawn(function()
-    while wait() do
-        if _G.Select_Pirates then
-            setTeam("Pirates")
-            _G.Select_Pirates = false  
-            break
-        end
-    end
-end)
-spawn(function()
-    while wait() do
-        if _G.Select_Marines then
-            setTeam("Marines")
-            _G.Select_Marines = true  
-            break
-        end
-    end
-end)
-
 shared.LoaderTitle = "Beta Version";
 shared.LoaderKeyFrames = {
     [1] = {
